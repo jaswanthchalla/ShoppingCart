@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Shopping Cart</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/10f569da1e.js" crossorigin="anonymous"></script> <!-- For icons -->
+</head>
+<body>
+    <nav id="nav-bar">
+        <div class="logo">ShopEase</div>
+        <div class="hamburger-menu">
+            <div class="menu-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-text">Menu</div>
+        </div>
+        <div class="nav-items">
+            <a href="#" class="selected" id="all" onclick="updateProductDisplay('all')">All</a>
+            <a href="#" id="mobiles" onclick="updateProductDisplay('mobiles')">Mobiles</a>
+            <a href="#" id="laptops" onclick="updateProductDisplay('laptops')">Laptops</a>
+            <a href="#" id="electronics" onclick="updateProductDisplay('electronics')">Electronics</a>
+        </div>
+        <div class="cart-symbol" onclick="showOrHideCart()">
+            🛒 <span id="item-count">0</span>
+        </div>
+    </nav>
+
+    <div class="move-top"><a href="#nav-bar"><i class="fa-solid fa-arrow-up"></i></a></div>
+
+    <div class="cart-body" id="cart-body">
+        <h2>Your Cart</h2><br/>
+        <div id="cart-items">Your Cart is Empty!</div><br/>
+        <div class="total-price">
+            <h3>Total: Rs.<span id="total-price">0</span></h3>
+            <button onclick="emptyCart()" class="empty-cart">Empty Cart</button>
+        </div>
+    </div>
+
+    <main class="products-list" id="products-list">
+        <!-- Items are added using Javascript -->
+    </main>
+
+    <footer>
+        <p>&copy; ShopEase 2025. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
