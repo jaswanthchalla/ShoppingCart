@@ -146,7 +146,7 @@ function updateCartList() {
                 <p>Rs.${item.price}</p>
             </div>
             <div class="update-cart-quantity">
-                <button onclick="event.stopPropagation(); eveupdateCartItemQuantity(${item.id}, ${item.quantity - 1})">-</button>
+                <button onclick="event.stopPropagation(); updateCartItemQuantity(${item.id}, ${item.quantity - 1})">-</button>
                 <span>${item.quantity}</span>
                 <button onclick="event.stopPropagation(); updateCartItemQuantity(${item.id}, ${item.quantity + 1})">+</button>
                 <button onclick="event.stopPropagation(); removeFromCart(${item.id})">🗑️</button>
